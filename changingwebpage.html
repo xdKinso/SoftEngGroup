@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>My Changing Web Page!</title>
+        <script>
+            function change() {
+            document.getElementById("my_text").innerHTML = "You clicked me";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            Click the button!
+        </h1>
+        <input type="button" id="but1" value="Click me!" onclick="change()">
+        <p id="my_text">
+            Hello, world!
+        </p>
+    </body>
+    
+</html>
