@@ -1,6 +1,6 @@
 FROM node:16
 
-<<<<<<< HEAD
+
 # Create app directory
 WORKDIR /usr/src/app
 
@@ -18,5 +18,4 @@ COPY . .
 EXPOSE 8080
 
 CMD [ "node", "server.js" ]
-=======
->>>>>>> d4d29cea903f51331d4a5919430bc02b23409823
+
