@@ -1,0 +1,10 @@
+extends layout
+
+block head
+  link(rel="stylesheet", href="/gallery.css")
+
+block content
+  h2 Gallery
+  .gallery
+    each idx in Array.from(Array(25).keys())
+        img.gallery-img(src=`https://source.unsplash.com/random/${idx}`, alt="")
