@@ -8,3 +8,5 @@ https://roehampton-se.monday.com/users/sign_up?invitationId=25284889976793637000
 useful:
 https://github.com/Frioo/se-git-demo/blob/lab-06-cjs/docker-compose.yml
 
+a finished zube.io integgration:
+https://zube.io/softeng/soft-eng/w/workspace-1/kanban
