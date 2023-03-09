@@ -15,8 +15,6 @@ app.set("view engine", "pug");
 // Serve assets from 'static' folder
 app.use(express.static("static"));
 
-console.log(process.env.NODE_ENV);
-
 /* Setup database connection */
 const db = await mysql.createConnection({
   host: process.env.DATABASE_HOST || "localhost",
@@ -25,19 +23,22 @@ const db = await mysql.createConnection({
   database: "world",
 });
 
-/* Landing route */
-app.get("/", (req, res) => {
-  res.render("index");
-});
-
 // Sample API route
 app.get("/ping", (req, res) => {
   res.send("pong");
 });
 
 // Landing route
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/", async (req, res) => {
+  try{
+    const sumPopulation = await db.execute("SELECT SUM(Population) FROM city ");
+    console.log(sumPopulation)
+    return res.render("index" , {sumPopulation});
+  } catch(err) {
+    console.error(err);
+  }
+  
+
 });
 
 // Gallery route
