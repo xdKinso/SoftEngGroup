@@ -31,9 +31,9 @@ app.get("/ping", (req, res) => {
 // Landing route
 app.get("/", async (req, res) => {
   try{
-    const sumPopulation = await db.execute("SELECT SUM(Population) FROM city ");
-    console.log(sumPopulation)
-    return res.render("index" , {sumPopulation});
+    const sumPopulation = await db.execute("SELECT SUM(Population) FROM country");
+    //console.log(sumPopulation)
+    return res.render("index" , { sumPopulation: sumPopulation[0][0] });
   } catch(err) {
     console.error(err);
   }
