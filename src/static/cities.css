@@ -1,0 +1,30 @@
+:root {
+    --clr-table: rgba(255, 255, 255, 0.75);
+  }
+  
+  table {
+    border: 1px solid var(--clr-table);
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border-bottom: 1px solid var(--clr-table);
+    padding: 0.25rem 1rem;
+    text-align: left;
+    color: rgba(0,0,0,0.85);
+  }
+  
+  .fit {
+    width: 1px;
+    white-space: nowrap;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .number {
+    font-family: monospace;
+    text-align: right;
+  }

@@ -1,9 +1,9 @@
 extends layout.pug
 
+block head
+  link(rel="stylesheet", href="/index.css")
+  
 block content
   h1 WELCOME TO THE WORLD DATABASE
-  
-
-  asside
-    - const value = sumPopulation['SUM(Population)'];
-    h2 The population of the world is: #{Number(value).toLocaleString()}
+  - const value = sumPopulation['SUM(Population)'];
+  h2(centre) The population of the world is: #{Number(value).toLocaleString()}
