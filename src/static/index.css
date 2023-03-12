@@ -1,6 +1,32 @@
-.h2{
-    text-align: right;
+body{
+    
+    /*colour should be 1b2727 (recomended by Anna)*/
 }
-.h1{
+
+
+h2{
+    text-align: center;
+}
+
+p{
+    margin-top: 20%;
+    text-align: center;
+}
+
+.text{
+    margin-top: 20%;
+    font-size: 60px;
+    text-align: center;
+    
+    
+}
+.counter{
+    text-align: center;
+    font-size: 64px ;
+}
+
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
     text-align: center;
 }

@@ -3,7 +3,10 @@ extends layout.pug
 block head
   link(rel="stylesheet", href="/index.css")
   
+
+
 block content
   h1 WELCOME TO THE WORLD DATABASE
   - const value = sumPopulation['SUM(Population)'];
-  h2 The population of the world is: #{Number(value).toLocaleString()}
+  p(class = "text") The Population Of The World Is: 
+  h2(class = "counter") #{Number(value).toLocaleString()}
