@@ -48,7 +48,7 @@ app.get("/gallery", (req, res) => {
 
 // About route
 app.get("/about", (req, res) => {
-  res.render("about", { title: "Boring about page" });
+  res.render("about", { title: "Team" });
 });
 
 app.get("/cities", async (req, res) => {
