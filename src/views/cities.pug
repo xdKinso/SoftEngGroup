@@ -4,6 +4,12 @@ block head
   link(rel="stylesheet", href="/cities.css")
 
 block content
+  label Select a website to display: 
+  select(name='dropdown')
+    option(value='Cities') City
+    option(value='Country') Country
+    option(value='Country Language') Country language
+    if value == "cities"
   h2 Cities
   table
     thead
