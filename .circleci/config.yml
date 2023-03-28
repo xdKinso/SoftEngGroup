@@ -9,7 +9,15 @@ jobs:
       - run: echo "hello world"               # print 'hello world'
       - run: echo row.population
       - run: echo value
-
+      - run: |
+          app.get("/", async (req, res) => {
+            try{
+              const sumPopulation = await db.execute("SELECT SUM(Population) FROM country");
+              //console.log(sumPopulation)
+              return res.render("index" , { sumPopulation: sumPopulation[0][0] });
+            } catch(err) {
+              console.error(err);
+            }
 workflows:
   my-workflow:                                # Name of the workflow. You can additional workflows below.
     jobs:                                     # The jobs to run as part of this workflow
