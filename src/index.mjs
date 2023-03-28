@@ -53,14 +53,61 @@ app.get("/about", (req, res) => {
 
 app.get("/cities", async (req, res) => {
   try {
-    // Fetch cities from database
-    const [rows, fields] = await db.execute("SELECT * FROM `city`");
-    /* Render cities.pug with data passed as plain object */
-    return res.render("cities", { rows, fields });
+    // Extract the value parameter from the query string
+    const value = req.query.value || "Cities";
+
+    const [countries, _] = await db.execute(`
+      SELECT co.Name as CountryName, co.Code as CountryCode
+      FROM country co
+    `);
+
+    let rows = [];
+
+    for (const country of countries) {
+      if (value === "Cities") {
+        const [cities, __] = await db.execute(`
+          SELECT ci.Name as CityName
+          FROM city ci
+          WHERE ci.CountryCode = ?
+        `, [country.CountryCode]);
+
+        cities.forEach(city => {
+          rows.push({
+            CountryCode: country.CountryCode,
+            CountryName: country.CountryName,
+            CityName: city.CityName
+          });
+        });
+      } else if (value === "Country Language") {
+        const [languages, __] = await db.execute(`
+          SELECT cl.Language
+          FROM countrylanguage cl
+          WHERE cl.CountryCode = ? AND cl.IsOfficial = 'T'
+        `, [country.CountryCode]);
+
+        languages.forEach(language => {
+          rows.push({
+            CountryCode: country.CountryCode,
+            CountryName: country.CountryName,
+            Language: language.Language
+          });
+        });
+      } else {
+        rows.push({
+          CountryCode: country.CountryCode,
+          CountryName: country.CountryName
+        });
+      }
+    }
+
+    /* Render cities.pug with data passed as a plain object */
+    return res.render("cities", { rows, value });
   } catch (err) {
-    console.error(err);
+    console.error("Error in /cities route:", err);
+    res.status(500).send("Internal server error: " + err.message);
   }
 });
+
 
 // Returns JSON array of cities
 app.get("/api/cities", async (req, res) => {
@@ -77,3 +124,16 @@ app.listen(port, () => {
 app.get("/update", async (req, res) => {
   res.render("update");
 });
+
+function onDropdownChange() {
+  const dropdown = document.querySelector('select[name="dropdown"]');
+  const selectedValue = dropdown.value;
+
+  const table = document.querySelector("table.fade-in");
+  table.classList.remove("fade-in");
+
+  setTimeout(() => {
+    table.classList.add("fade-in");
+    window.location.href = `/cities?value=${selectedValue}`;
+  }, 50);
+}

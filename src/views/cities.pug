@@ -2,24 +2,44 @@ extends layout.pug
 
 block head
   link(rel="stylesheet", href="/cities.css")
+  link(rel="stylesheet", href="/animations.css")
+  script.
+    function onDropdownChange() {
+      const dropdown = document.querySelector('select[name="dropdown"]');
+      const selectedValue = dropdown.value;
+      
+      const table = document.querySelector("table.fade-in");
+      table.classList.remove("fade-in");
+
+      setTimeout(() => {
+        table.classList.add("fade-in");
+        window.location.href = `/cities?value=${selectedValue}`;
+      }, 50);
+    }
 
 block content
   label Select a website to display: 
-  select(name='dropdown')
-    option(value='Cities') City
-    option(value='Country') Country
-    option(value='Country Language') Country language
-    if value == "cities"
-  h2 Cities
-  table
-    thead
-      th.text-center 🏴
-      th City
-      th.number Population
-    tbody
-      each row in rows
-        tr
-          td.fit #{row.CountryCode}
-          td #{row.Name}
-          - const population = new Intl.NumberFormat().format(row.Population);
-          td.fit.number #{population}
+  select(name='dropdown', onchange="onDropdownChange()")
+    option(value='Cities', selected=value === 'Cities') City
+    option(value='Country', selected=value === 'Country') Country
+    option(value='Country Language', selected=value === 'Country Language') Country language
+
+  if value === "Cities" || value === "Country" || value === "Country Language"
+    h2 Cities, Countries, and Languages
+    table.fade-in
+      thead
+        th.text-center 🏴
+        th Country
+        if value === "Cities"
+          th City
+        if value === "Country Language"
+          th Language
+      tbody
+        each row in rows
+          tr
+            td.fit #{row.CountryCode}
+            td #{row.CountryName}
+            if value === "Cities"
+              td #{row.CityName}
+            if value === "Country Language"
+              td #{row.Language}
