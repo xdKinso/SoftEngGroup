@@ -1,33 +1,71 @@
-body{
-    
-    /*colour should be 1b2727 (recomended by Anna)*/
-}
-
-
-h2{
+:root {
+    --main-color: #1b2727;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: var(--main-color);
+  }
+  
+  h1, h2 {
     text-align: center;
-}
-
-p{
-    margin-top: 20%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 1rem;
+    color: var(--main-color);
+  }
+  
+  p {
     text-align: center;
-}
-
-.text{
-    margin-top: 20%;
-    font-size: 60px;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .text {
+    margin-top: 2rem;
+    font-size: 3rem;
     text-align: center;
-    
-    
-}
-.counter{
+  }
+  
+  .counter {
     text-align: center;
-    font-size: 64px ;
-}
-
-h1{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 60px;
+    font-size: 4rem;
+  }
+  
+  a {
+    color: var(--main-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 0.5rem;
     text-align: center;
-}
-
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #fff;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+  }
+  
+  

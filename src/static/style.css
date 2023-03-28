@@ -1,8 +1,8 @@
 html,
 body {
-  font-size: 14px;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #eeeeee;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
 }
@@ -17,43 +17,98 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0rem 3rem;
+  padding: 0 1rem;
 }
 
 h1 {
-  font-size: xx-large;
+  font-size: 3rem;
   margin: 0;
-  padding: 0;
+  padding: 1rem 0;
+  font-weight: bold;
+  text-align: center;
+  color: #6d4c41;
+  text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
 }
 
 h2 {
   margin: 0;
   margin-bottom: 1rem;
   padding: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
 nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1.5rem;
   padding: 1rem 0rem;
+  background-color: #8e7d7d;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav b {
-  font-size: large;
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
 }
 
 nav a {
-  color: #181818;
+  color: white;
   text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
 }
 
 nav a:hover {
-  color: cornflowerblue;
+  background-color: white;
+  color: #8e7d7d;
 }
 
 .layout-content {
   padding-top: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #8e7d7d;
+  color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #8e7d7d;
+  border: 2px solid #8e7d7d;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #6d4c41;
+}
+
+.section-content {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
 }

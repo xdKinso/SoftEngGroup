@@ -1,36 +1,78 @@
 :root {
-    --clr-table: rgba(255, 255, 255, 0.75);
-  }
-  
-  table {
-    border: 1px solid var(--clr-table);
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
-    border-bottom: 1px solid var(--clr-table);
-    padding: 0.25rem 1rem;
-    text-align: left;
-    color: rgba(0,0,0,0.85);
-  }
-  
-  .fit {
-    width: 1px;
-    white-space: nowrap;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .number {
-    font-family: monospace;
-    text-align: right;
-  }
-  select{
-    font-size: 18px;
-  }
-  label{
-    font-size: 24px;
-  }
+  --clr-primary: #0077b6;
+  --clr-secondary: #f5f5f5;
+  --clr-accent: #f95738;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-accent);
+}
+
+tr:nth-child(even) {
+  background-color: var(--clr-secondary);
+}
+
+tr:hover {
+  background-color: #e5e5e5;
+}
+
+.fit {
+  width: 1px;
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.number {
+  font-family: monospace;
+  text-align: right;
+}
+
+select {
+  font-size: 16px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  outline: none;
+  color: var(--clr-primary);
+  transition: all 0.2s ease-in-out;
+}
+
+select:focus {
+  border-color: var(--clr-accent);
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--clr-primary);
+}
