@@ -2,11 +2,10 @@ extends layout.pug
 
 block head
   link(rel="stylesheet", href="/index.css")
-  
-
 
 block content
-  h1 WELCOME TO THE WORLD DATABASE
-  - const value = sumPopulation['SUM(Population)'];
-  p(class = "text") The Population Of The World Is: 
-  h2(class = "counter") #{Number(value).toLocaleString()}
+  .intro
+    h1(class="title") WELCOME TO THE WORLD DATABASE
+    - const population = sumPopulation['SUM(Population)'];
+    p(class="text") The population of the world is: 
+    h2(class="counter counter-animation") #{Number(population).toLocaleString()}

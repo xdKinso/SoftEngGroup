@@ -5,8 +5,8 @@
   }
   
   .profile {
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
     padding: 1rem;
     background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -23,13 +23,18 @@
     height: auto;
     object-fit: cover;
     border-radius: 50%;
+    border: 3px solid #fff;
   }
   
   .profile h3 {
     margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #333;
   }
   
   .profile p {
+    font-size: 1rem;
     color: #666;
+    line-height: 1.2;
   }
   
