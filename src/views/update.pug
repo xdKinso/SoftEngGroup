@@ -2,3 +2,22 @@ extends layout.pug
 
 block head
   link(rel="stylesheet", href="/index.css")
+  link(rel="stylesheet", href="/update.css")
+  //link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+
+
+block content 
+    h2 Update the Database 
+    
+    form
+      .mb-3
+        label.form-label(for='exampleInputEmail1') Email address
+        input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp')
+        #emailHelp.form-text We&apos;ll never share your email with anyone else.
+      .mb-3
+        label.form-label(for='exampleInputPassword1') Password
+        input#exampleInputPassword1.form-control(type='password')
+      .mb-3.form-check
+        input#exampleCheck1.form-check-input(type='checkbox')
+        label.form-check-label(for='exampleCheck1') Check me out
+      button.btn.btn-primary(type='submit') Submit
