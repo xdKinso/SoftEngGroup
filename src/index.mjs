@@ -72,3 +72,8 @@ app.get("/api/cities", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+// Update route
+app.get("/update", async (req, res) => {
+  res.render("update");
+});
