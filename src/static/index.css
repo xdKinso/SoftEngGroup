@@ -76,6 +76,17 @@ a:hover {
 .counter-animation {
   animation: count-up 1s ease-in-out;
 }
+h1.title {
+  color: seagreen;
+}
+
+p.text {
+  color: seagreen;
+}
+h2.counter {
+  color: orange;
+}
+
 
 @keyframes count-up {
   0% {
