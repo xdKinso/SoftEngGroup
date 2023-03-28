@@ -1,14 +1,15 @@
 version: 2.1
 
 jobs:
-  hello-job:
+  works-job:
     docker:
       - image: cimg/node:17.2.0               # the primary container, where your job's commands are run
     steps:
       - checkout                              # check out the code in the project directory
       - run: echo "hello world"               # print 'hello world'
+      - run: const [rows, fields] = await db.execute("SELECT * FROM `city`");
 
 workflows:
   my-workflow:                                # Name of the workflow. You can additional workflows below.
     jobs:                                     # The jobs to run as part of this workflow
-      - hello-job                             # Example 'hello world' job.
+      - works-job                             # Example 'hello world' job.
