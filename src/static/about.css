@@ -37,4 +37,25 @@
     color: #666;
     line-height: 1.2;
   }
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #10a50e;
+    color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:hover {
+    background-color: #ffd700;
+    color: #0077b6;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
   

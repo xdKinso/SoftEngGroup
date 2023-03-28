@@ -17,6 +17,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1rem;
+  font-size: 14px;
 }
 
 th, td {
@@ -30,6 +31,7 @@ th {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--clr-accent);
+  font-weight: bold;
 }
 
 tr:nth-child(even) {
@@ -40,18 +42,27 @@ tr:hover {
   background-color: #e5e5e5;
 }
 
-.fit {
+td.fit {
   width: 1px;
   white-space: nowrap;
 }
 
-.text-center {
+td.text-center {
   text-align: center;
 }
 
-.number {
+td.number {
   font-family: monospace;
   text-align: right;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--clr-primary);
 }
 
 select {
@@ -66,13 +77,4 @@ select {
 
 select:focus {
   border-color: var(--clr-accent);
-}
-
-label {
-  font-size: 18px;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--clr-primary);
 }
