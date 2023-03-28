@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  nav a:hover {
+    color: #ffd700;
+  }
+  
+  nav a b {
+    font-weight: 700;
+    color: #ffd700;
+  }
+  
