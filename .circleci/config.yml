@@ -6,8 +6,7 @@ jobs:
       - image: cimg/node:17.2.0
     steps:
       - checkout
-      - run: echo "hello world"
-      - run: npm install                    # Install dependencies
+      - run: echo "hello world"                  # Install dependencies
       - run: node src/index.mjs
 
 workflows:
