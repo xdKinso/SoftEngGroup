@@ -7,8 +7,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
-      - run: ls -la                        # List the contents of the project directory
-      - run: node /home/circleci/project/.circleci/index.mjs
+      - run: node src/index.mjs
 
 workflows:
   my-workflow:
