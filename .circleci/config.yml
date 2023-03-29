@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
-      - run: node  home/SoftEngGroup/index.mjs
+      - run: node  src/views/index.pug
 
 workflows:
   my-workflow:
