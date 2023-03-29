@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
-      - run: node  src/views/index.pug
+      - run: node  src/views/index.mjs
 
 workflows:
   my-workflow:
