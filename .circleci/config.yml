@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
-      - run: node index.mjs
+      - run: node  /.circleci/index.mjs
 
 workflows:
   my-workflow:
