@@ -2,11 +2,12 @@ version: 2.1
 
 jobs:
   works-job:
-    working_directory: ~/src
+    working_directory: ~/SoftEngGroup/src
     docker:
       - image: cimg/node:17.2.0
     steps:
-      - checkout
+      - checkout:
+          path: ~/SoftEngGroup
       - run: echo "hello world" 
       - run: npm install           
       - run: npm test
