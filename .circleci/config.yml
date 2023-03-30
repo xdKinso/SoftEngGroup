@@ -6,7 +6,8 @@ jobs:
       - image: cimg/node:17.2.0
     steps:
       - checkout
-      - run: echo "hello world"                  # Install dependencies
+      - run: echo "hello world" 
+      - run: npm run                 # Install dependencies
       - run: npm test
 
 workflows:
