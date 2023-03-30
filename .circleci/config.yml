@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"                  # Install dependencies
-      - run: npm run
       - run: npm test
 
 workflows:
