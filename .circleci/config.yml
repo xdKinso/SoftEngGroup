@@ -6,6 +6,7 @@ jobs:
       - image: cimg/node:17.2.0
     steps:
       - checkout
+      - run: docker compose up -d --build
       - run: echo "hello world"                  # Install dependencies
       - run: node src/index.mjs
 
