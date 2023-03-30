@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   works-job:
-    working_directory: ~/SoftEngGroup/src
+    working_directory: ~/src
     docker:
       - image: cimg/node:17.2.0
     steps:
