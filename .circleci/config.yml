@@ -7,7 +7,8 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"                  # Install dependencies
-      - run: node src/index.mjs
+      - run: npm run
+      - run: npm test
 
 workflows:
   my-workflow:
