@@ -7,9 +7,8 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world" 
-      - run: ls -la
-      - run: npm install
-      - run: npm run                
+      - run: cd src
+      - run: npm install           
       - run: npm test
 
 workflows:
