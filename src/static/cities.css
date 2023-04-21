@@ -116,5 +116,54 @@ button:after {
   content: "\f002";
   font-family: FontAwesome;
   font-size: 1.2em;
- 
+}
+
+form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+label {
+  margin-right: 0.5rem;
+}
+
+input[type="text"] {
+  font-size: 16px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: #f0f0f0;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding-right: 2.5rem;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 0 2px var(--clr-primary);
+}
+
+button[type="submit"] {
+  margin-left: 0.5rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+label[for="search"] {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0;
+}
+
+
+label:first-child {
+  margin-right: 0.5rem;
 }
