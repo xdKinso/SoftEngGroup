@@ -38,6 +38,7 @@ app.get("/about", (req, res) => {
 app.get("/cities", async (req, res) => {
   try {
     const value = req.query.value || "Cities";
+    const search = req.query.search || "";
     const [countries, _] = await db.execute("SELECT co.Name as CountryName, co.Code as CountryCode FROM country co");
     let rows = [];
 
@@ -79,7 +80,13 @@ app.get("/cities", async (req, res) => {
       }
     }
 
-    return res.render("cities", { rows, value });
+    if (search) {
+      // If there is a search query, filter the rows
+      const searchRegex = new RegExp(search, "i");
+      rows = rows.filter(row => searchRegex.test(row.CityName));
+    }
+
+    return res.render("cities", { rows, value, search });
   } catch (err) {
     console.error("Error in /cities route:", err);
     res.status(500).send("Internal server error: " + err.message);

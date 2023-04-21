@@ -7,7 +7,7 @@ block head
     function onDropdownChange() {
       const dropdown = document.querySelector('select[name="dropdown"]');
       const selectedValue = dropdown.value;
-      
+
       const table = document.querySelector("table.fade-in");
       table.classList.remove("fade-in");
 
@@ -23,6 +23,12 @@ block content
     option(value='Cities', selected=value === 'Cities') City
     option(value='Country', selected=value === 'Country') Country
     option(value='Country Language', selected=value === 'Country Language') Country language
+
+  // Add the search bar here
+  form(method="GET", action="/cities")
+    label(for="search") Search city:
+    input(type="text", name="search", id="search", value=search)
+    button(type="submit") Search
 
   if value === "Cities" || value === "Country" || value === "Country Language"
     h2 Cities, Countries, and Languages
