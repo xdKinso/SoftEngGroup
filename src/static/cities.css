@@ -105,8 +105,16 @@ button {
   color: #fff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  position: relative;
 }
 
 button:hover {
   background-color: var(--clr-accent);
+}
+
+button:after {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 1.2em;
+ 
 }
