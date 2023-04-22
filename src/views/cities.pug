@@ -28,17 +28,18 @@ block head
     }
 
 block content
-  label Select a website to display: 
-  select(name='dropdown', onchange="onDropdownChange()")
-    option(value='Cities', selected=value === 'Cities') City
-    option(value='Country', selected=value === 'Country') Country
-    option(value='Country Language', selected=value === 'Country Language') Country language
-
-  label Select number of rows to display:
-  select(name='rowLimit', onchange="onRowLimitChange()")
-    option(value='10', selected=rowLimit === '10') 10
-    option(value='15', selected=rowLimit === '15') 15
-    option(value='20', selected=rowLimit === '20') 20
+  div.form-container
+    form.form-inline
+      label Select a website to display: 
+      select(name='dropdown', onchange="onDropdownChange()")
+        option(value='Cities', selected=value === 'Cities') City
+        option(value='Country', selected=value === 'Country') Country
+        option(value='Country Language', selected=value === 'Country Language') Country language
+      label(for='rowLimit') Select number of rows to display:
+      select#rowLimit(name='rowLimit', onchange="onRowLimitChange()")
+        option(value='10', selected=rowLimit === '10') 10
+        option(value='15', selected=rowLimit === '15') 15
+        option(value='20', selected=rowLimit === '20') 20
 
   div.alphabet-bar
     each letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'

@@ -105,3 +105,20 @@ button:hover {
   gap: 0.5rem;
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+}
+
+.form-inline label {
+  margin-right: 0.5rem;
+  margin-bottom: 0;
+}
