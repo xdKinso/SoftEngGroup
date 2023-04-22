@@ -40,6 +40,8 @@ app.get("/cities", async (req, res) => {
     const value = req.query.value || "Cities";
     const search = req.query.search || "";
     const rowLimit = req.query.rowLimit || "10";
+    const letter = req.query.letter || "";
+
     const [countries, _] = await db.execute("SELECT co.Name as CountryName, co.Code as CountryCode FROM country co");
     let rows = [];
 
@@ -87,10 +89,15 @@ app.get("/cities", async (req, res) => {
       rows = rows.filter(row => searchRegex.test(row.CityName));
     }
 
-    // Limit the number of rows based on rowLimit
+    if (letter) {
+      // If there is a letter query, filter the rows
+      rows = rows.filter(row => row.CityName && row.CityName[0].toUpperCase() === letter);
+    }
+
+    // Apply the row limit
     rows = rows.slice(0, parseInt(rowLimit));
 
-    return res.render("cities", { rows, value, search, rowLimit });
+    return res.render("cities", { rows, value, search, rowLimit, letter });
   } catch (err) {
     console.error("Error in /cities route:", err);
     res.status(500).send("Internal server error: " + err.message);

@@ -23,6 +23,10 @@ block head
       window.location.href = `/cities?rowLimit=${selectedRowLimit}`;
     }
 
+    function onAlphabetClick(letter) {
+      window.location.href = `/cities?letter=${letter}`;
+    }
+
 block content
   label Select a website to display: 
   select(name='dropdown', onchange="onDropdownChange()")
@@ -36,13 +40,15 @@ block content
     option(value='15', selected=rowLimit === '15') 15
     option(value='20', selected=rowLimit === '20') 20
 
-  // Wrap the search bar in a container and align it to the right
+  div.alphabet-bar
+    each letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+      button(type='button', onclick=`onAlphabetClick('${letter}')`) #{letter}
+
   form.search-container(method="GET", action="/cities")
     label(for="search") Search city:
     input(type="text", name="search", id="search", value=search)
     button(type="submit") Search
 
-  // rest of the code remains the same
   if value === "Cities" || value === "Country" || value === "Country Language"
     h2 Cities, Countries, and Languages
     table.fade-in
