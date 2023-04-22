@@ -6,6 +6,7 @@ const port = 3000;
 
 app.set("view engine", "pug");
 app.use(express.static("static"));
+app.use(express.json({ charset: 'utf-8' }));
 
 const db = await mysql.createConnection({
   host: process.env.DATABASE_HOST || "localhost",
