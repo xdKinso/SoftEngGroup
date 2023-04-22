@@ -30,8 +30,8 @@ block head
 block content
   div.form-container
     form.form-inline
-      label Select a website to display: 
-      select(name='dropdown', onchange="onDropdownChange()")
+      label(for='dropdown') Select a website to display:
+      select(name='dropdown', id='dropdown', onchange="onDropdownChange()", style="margin-right: 20px")
         option(value='Cities', selected=value === 'Cities') City
         option(value='Country', selected=value === 'Country') Country
         option(value='Country Language', selected=value === 'Country Language') Country language
