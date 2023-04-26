@@ -35,29 +35,31 @@
   }
   
   .profile p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.2;
-  }
-  .btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #10a50e;
-    color: white;
-    border-radius: 0.5rem;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.2s ease-in-out;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  }
+    font-size: 1rem; /* Sets the font size of .profile p to 1rem */
+    color: #666; /* Sets the color of .profile p to #666 (gray) */
+    line-height: 1.2; /* Sets the line height of .profile p to 1.2 */
+}
+  /* Button styles */
+.btn {
+display: inline-block; /* Display as an inline block element */
+padding: 0.75rem 1.5rem; /* Padding on top/bottom and left/right */
+background-color: #10a50e; /* Background color */
+color: white; /* Text color */
+border-radius: 0.5rem; /* Border radius to create rounded corners */
+text-align: center; /* Text alignment at the center */
+text-decoration: none; /* Remove underline from links */
+font-size: 1rem; /* Font size */
+transition: all 0.2s ease-in-out; /* Transition effect on hover with ease-in-out timing */
+border: none; /* No border */
+cursor: pointer; /* Cursor changes to a pointer on hover */
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle 3D effect */
+}
   
-  .btn:hover {
-    background-color: #ffd700;
-    color: #0077b6;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
+  /* Hover styles for the button */
+.btn:hover {
+background-color: #ffd700; /*  Background color on hover */
+color: #0077b6; /*  Text color on hover */
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /*  Box shadow on hover for a more pronounced 3D effect */
+}
   
   
