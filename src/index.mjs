@@ -42,6 +42,7 @@ app.get("/cities", async (req, res) => {
     const search = req.query.search || "";
     const rowLimit = req.query.rowLimit || "10";
     const letter = req.query.letter || "";
+    const sort = req.query.sort || "";
 
     const [countries, _] = await db.execute("SELECT co.Name as CountryName, co.Code as CountryCode FROM country co");
     let rows = [];
@@ -85,35 +86,31 @@ app.get("/cities", async (req, res) => {
     }
 
     if (search) {
-      // If there is a search query, filter the rows
       const searchRegex = new RegExp(search, "i");
       rows = rows.filter(row => searchRegex.test(row.CityName));
     }
 
     if (letter) {
-      // If there is a letter query, filter the rows
       rows = rows.filter(row => row.CityName && row.CityName[0].toUpperCase() === letter);
     }
 
-    // Apply the row limit
+    if (value === "Cities") {
+      if (sort === "asc") {
+        rows.sort((a, b) => a.CityPopulation - b.CityPopulation);
+      } else if (sort === "desc") {
+        rows.sort((a, b) => b.CityPopulation - a.CityPopulation);
+      }
+    }
+
     rows = rows.slice(0, parseInt(rowLimit));
 
-    return res.render("cities", { rows, value, search, rowLimit, letter });
+    return res.render("cities", { rows, value, search, rowLimit, letter, sort });
   } catch (err) {
     console.error("Error in /cities route:", err);
     res.status(500).send("Internal server error: " + err.message);
   }
 });
-
-app.get("/api/cities", async (req, res) => {
-  const [rows, fields] = await db.execute("SELECT * FROM `city`");
-  return res.send(rows);
-});
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
-
-app.get("/update", async (req, res) => {
-  res.render("update");
-});
+  
+  app.listen(port, () => {
+    console.log(`App listening at http://localhost:${port}`);
+  });

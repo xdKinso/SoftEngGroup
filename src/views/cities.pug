@@ -27,6 +27,15 @@ block head
       window.location.href = `/cities?letter=${letter}`;
     }
 
+    function onSortByChange() {
+      const sortByDropdown = document.querySelector('select[name="sortBy"]');
+      const selectedSortBy = sortByDropdown.value;
+      const currentUrl = new URL(window.location.href);
+      currentUrl.searchParams.set("sort", selectedSortBy);
+      window.location.href = currentUrl.toString();
+    }
+
+
 block content
   div.form-container
     form.form-inline
@@ -40,6 +49,11 @@ block content
         option(value='10', selected=rowLimit === '10') 10
         option(value='15', selected=rowLimit === '15') 15
         option(value='20', selected=rowLimit === '20') 20
+      label(for='sortBy') Sort by:
+      select#sortBy(name='sortBy', onchange="onSortByChange()")
+        option(value='', selected=sort === '') Sort by
+        option(value='asc', selected=sort === 'asc') Population (Ascending)
+        option(value='desc', selected=sort === 'desc') Population (Descending)
 
   div.alphabet-bar
     each letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -51,23 +65,23 @@ block content
     button(type="submit") Search
 
   if value === "Cities" || value === "Country" || value === "Country Language"
-    h2 Cities, Countries, and Languages
-    table.fade-in
-      thead
-        th.text-center 🏴
-        th Country
-        if value === "Cities"
-          th City
-          th Population
-        if value === "Country Language"
-          th Language
-      tbody
-        each row in rows
-          tr
-            td.fit #{row.CountryCode}
-            td #{row.CountryName}
-            if value === "Cities"
-              td #{row.CityName}
-              td.number.fit #{row.CityPopulation}
-            if value === "Country Language"
-              td #{row.Language}
+  h2 Cities, Countries, and Languages
+  table.fade-in
+    thead
+      th.text-center 🏴
+      th Country
+      if value === "Cities"
+        th City
+        th Population
+      if value === "Country Language"
+        th Language
+    tbody
+      each row in rows
+        tr
+          td.fit #{row.CountryCode}
+          td #{row.CountryName}
+          if value === "Cities"
+            td #{row.CityName}
+            td.number.fit #{row.CityPopulation}
+          if value === "Country Language"
+            td #{row.Language}
