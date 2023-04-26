@@ -1,10 +1,10 @@
-html,
+html, /* Sets the font size and font family for the <html> and <body> elements */
 body {
   font-size: 16px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
+  background-color: #f5f5f5; /* Sets the background color of <body> to white*/
+  margin: 0;  /* Removes margin from <body> */
+  padding: 0; /* Removes padding from <body> */
 }
 
 *,
