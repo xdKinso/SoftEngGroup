@@ -5,13 +5,13 @@
 }
 
 .gallery-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease-in-out;
+  display: block; /* Sets the display property of the element to "block" */
+  width: 100%; /* Sets the width of the element to 100% of its container */
+  height: auto; /* Sets the height of the element to "auto", maintaining its aspect ratio */
+  object-fit: cover; /* Specifies how the image should be resized to cover its container, preserving its aspect ratio */
+  border-radius: 8px; /* Applies a border radius of 8px, rounding the corners of the element */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a box shadow with 0px horizontal offset, 4px vertical offset, 8px blur radius, and rgba(0, 0, 0, 0.1) color (which represents a light gray) */
+  transition: all 0.2s ease-in-out; /* Applies a transition effect to all CSS properties with a duration of 0.2s and an ease-in-out timing function */
 }
 
 .gallery-img:hover {
