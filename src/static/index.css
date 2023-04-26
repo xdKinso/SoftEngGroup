@@ -38,12 +38,12 @@ p {
 }
 
 a {
-  color: var(--main-color);
-  text-decoration: none;
+  color: var(--main-color); /* Sets the text color of anchor elements to the value of the custom CSS variable "--main-color" */
+  text-decoration: none; /* Removes the default underline text decoration from anchor elements */
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Adds an underline text decoration to anchor elements on hover */
 }
 
 .container {
