@@ -1,7 +1,7 @@
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  display: grid; /* Sets the display property of the element to "grid" */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Defines the template for grid columns, with "auto-fit" allowing the grid to automatically adjust based on available space, and "minmax(250px, 1fr)" setting the minimum column width to 250px and the maximum width to 1fr (which means it takes up the available space) */
+  gap: 1rem; /* Sets the gap between grid items to 1rem */
 }
 
 .gallery-img {
