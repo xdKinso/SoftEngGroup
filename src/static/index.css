@@ -64,7 +64,7 @@ a:hover {
   transition: all 0.2s ease-in-out;
   border: none;
 }
-
+/* Changes the background color and text color of elements with class "btn" when hovered */
 .btn:hover {
   background-color: var(--secondary-color);
   color: var(--main-color);
@@ -74,21 +74,21 @@ a:hover {
   animation: count-up 1s ease-in-out;
 }
 
-.counter-animation {
+.counter-animation { /* Applies the "count-up" animation to elements with class "counter-animation" */
   animation: count-up 1s ease-in-out;
 }
-h1.title {
+h1.title { /* Changes the text color of h1 elements with class "title" to seagreen */
   color: seagreen;
 }
 
-p.text {
+p.text { /* Changes the text color of p elements with class "text" to seagreen */
   color: seagreen;
 }
-h2.counter {
+h2.counter { /* Changes the text color of h2 elements with class "counter" to orange */
   color: orange;
 }
 
-
+/* Defines the "count-up" animation with keyframes */
 @keyframes count-up {
   0% {
     opacity: 0;
