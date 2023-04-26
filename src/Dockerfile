@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy the source coded
 COPY . .
 
-# Install dependencies
+# Install dependencie
 RUN npm install
 
 # Expose server ports
