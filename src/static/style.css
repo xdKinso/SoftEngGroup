@@ -51,12 +51,14 @@ nav { /* Defines the styles for <nav> elements */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling for <nav> element - navigation bar */
 nav b {
   font-size: 1.25rem;
   color: white;
   text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
 }
 
+/* Styling for <nav> element - navigation bar links */
 nav a {
   color: white;
   text-decoration: none;
