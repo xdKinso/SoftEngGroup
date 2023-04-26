@@ -13,30 +13,21 @@ body {
 }
 
 .form-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input[type=text], 
-input[type=email], 
-input[type=password], 
-select, 
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  color: var(--primary-color);
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
 }
 
 label {
@@ -48,7 +39,19 @@ label {
   color: var(--primary-color);
 }
 
-input[type=submit] {
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: var(--primary-color);
+}
+
+button {
   background-color: var(--button-color);
   color: #fff;
   padding: 12px 20px;
@@ -57,9 +60,11 @@ input[type=submit] {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial, sans-serif;
-  transition: background-color 0.3s ease;
+  width: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type=submit]:hover {
+button:hover {
   background-color: #3e8e41;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
