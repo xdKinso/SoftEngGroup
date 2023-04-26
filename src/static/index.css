@@ -27,14 +27,14 @@ p {
 }
 
 .text {
-  margin-top: 2rem;
-  font-size: 3rem;
-  text-align: center;
+  margin-top: 2rem; /* Adds 2rem of margin to the top of elements with class "text" */
+  font-size: 3rem; /* Sets the font size of elements with class "text" to 3rem */
+  text-align: center; /* Centers the text alignment for elements with class "text" */
 }
 
 .counter {
-  text-align: center;
-  font-size: 4rem;
+  text-align: center; /* Centers the text alignment for elements with class "counter" */
+  font-size: 4rem; /* Sets the font size of elements with class "counter" to 4rem */
 }
 
 a {
