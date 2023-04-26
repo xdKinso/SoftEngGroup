@@ -4,7 +4,7 @@ FROM node:latest
 # Create server directory inside images
 WORKDIR /app
 
-# Copy the source code
+# Copy the source coded
 COPY . .
 
 # Install dependencies
