@@ -1,13 +1,15 @@
+/* Keyframes for fade-in animation */
+
 @keyframes fadeIn {
     0% {
-      opacity: 0;
+      opacity: 0; /* Start with opacity 0 */
     }
     100% {
-      opacity: 1;
+      opacity: 1; /* End with opacity 1 */
     }
   }
   
-  .fade-in {
-    animation: fadeIn 1s ease-in;
+  .fade-in {  /* Class for applying fade-in animation */
+    animation: fadeIn 1s ease-in; /* Apply fadeIn animation with 1 second duration and ease-in timing function */
   }
   
