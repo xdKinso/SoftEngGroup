@@ -21,17 +21,17 @@
   }
   
   .profile img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #fff;
+    width: 100%; /* Sets the width of .profile img to 100% */
+    height: auto; /* Sets the height of .profile img to auto, maintaining its aspect ratio */
+    object-fit: cover; /* Sets the object-fit property of .profile img to cover, ensuring the image covers the entire element */
+    border-radius: 50%; /* Sets a border radius of 50% for .profile img, making it a circle */
+    border: 3px solid #fff;/* Sets a 3px solid border with color #fff (white) for .profile img */
   }
   
   .profile h3 {
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    color: #333;
+    margin: 1rem 0; /* Sets the margin for .profile h3 to 1rem (top and bottom) and 0 (left and right) */
+    font-size: 1.2rem; /* Sets the font size of .profile h3 to 1.2rem */
+    color: #333; /* Sets the color of .profile h3 to #333 (dark gray) */
   }
   
   .profile p {
