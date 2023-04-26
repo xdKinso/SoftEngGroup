@@ -15,6 +15,6 @@
 }
 
 .gallery-img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Applies a transformation to move the element 5 pixels up on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Changes the box shadow on hover to 0px horizontal offset, 8px vertical offset, 16px blur radius, and rgba(0, 0, 0, 0.2) color (which represents a darker gray) */
 }
