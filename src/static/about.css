@@ -5,12 +5,13 @@
 }
   
   .profile {
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease-in-out;
+    border: 2px solid #ddd;  /* Sets a 2px solid border with color #ddd for .profile */
+    border-radius: 10px; /* Sets a border radius of 10px for .profile */
+    padding: 1rem; /* Sets the padding for .profile to 1rem */
+    background-color: #fff;/* Sets the background color of .profile to #fff (white) */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sets a box shadow for .profile with offset-x of 0px, offset-y of 4px, blur radius of 8px, and color rgba(0, 0, 0, 0.1) */
+    transition: all 0.2s ease-in-out; /* Applies a transition effect with a duration of 0.2s and an easing function of ease-in-out to all properties of .profile */
+    
   }
   
   .profile:hover {
