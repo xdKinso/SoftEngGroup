@@ -10,7 +10,7 @@ COPY . .
 # Install dependencies
 RUN npm install
 
-# Expose server port
+# Expose server ports
 EXPOSE 3000
 
 # Start server using npm script
