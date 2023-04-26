@@ -47,14 +47,14 @@ a:hover {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+  max-width: 1200px; /* Sets the maximum width of elements with class "container" to 1200px */
+  margin: 0 auto; /* Centers elements with class "container" by setting margin left and right to auto */
+  padding: 1rem; /* Adds 1rem of padding to elements with class "container" */
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+  display: inline-block; /* Sets the display property of elements with class "btn" to "inline-block" */
+  padding: 0.75rem 1.5rem; 
   background-color: var(--main-color);
   color: var(--secondary-color);
   border-radius: 0.5rem;
