@@ -1,4 +1,4 @@
-# Use Node JS v16.x as base image
+# Use Node JS v16.x as base image 
 FROM node:latest
 
 # Create server directory inside image
