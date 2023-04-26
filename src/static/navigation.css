@@ -1,25 +1,25 @@
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #333;
-    padding: 1rem 0;
+nav { /* Defines the styles for the <nav> element */
+    display: flex; /* Sets the display property of <nav> to "flex" */
+    justify-content: space-around; /* Centers the child elements horizontally with equal space between them */
+    align-items: center; /* Centers the child elements vertically */
+    background-color: #333;  /* Sets the background color of <nav> to #333 */
+    padding: 1rem 0; /* Adds 1rem of padding to the top and bottom of <nav> and 0 padding to the left and right */
   }
   
-  nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: color 0.2s;
+  nav a { /* Defines the styles for <a> elements inside <nav> */
+    text-decoration: none; /* Removes text underline from <a> elements */
+    color: white; /* Sets the text color of <a> elements to white */
+    font-size: 1.2rem; /* Sets the font size of <a> elements to 1.2rem */
+    font-weight: 500; /* Sets the font weight of <a> elements to 500 */
+    transition: color 0.2s; /* Adds a smooth transition effect for the color property with a duration of 0.2s */
   }
-  
+  /* Changes the text color of <a> elements to #blue when hovered */
   nav a:hover {
     color: #0300be;
   }
   
-  nav a b {
-    font-weight: 700;
-    color: #d8de2c;
+  nav a b { /* Defines the styles for <b> elements inside <a> elements inside <nav> */
+    font-weight: 700; /* Sets the font weight of <b> elements to 700 */
+    color: #d8de2c; /*ß Sets the text color of <b> elements to #d8de2c */
   }
   
