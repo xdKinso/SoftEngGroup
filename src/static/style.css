@@ -41,10 +41,10 @@ h2 { /* Defines the styles for <h2> elements */
   color: #333; /* Sets the text color of <h2> elements to #333 */
 }
 
-nav {
+nav { /* Defines the styles for <nav> elements */
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* Centers the child elements of <nav> vertically */
+  justify-content: space-between; /* Aligns the child elements of <nav> with equal space between them */
   gap: 1.5rem;
   padding: 1rem 0rem;
   background-color: #8e7d7d;
