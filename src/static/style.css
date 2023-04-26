@@ -23,22 +23,22 @@ body {
 }
 
 h1 { /* Defines the styles for <h1> elements */
-  font-size: 3rem;
-  margin: 0;
-  padding: 1rem 0;
-  font-weight: bold;
-  text-align: center;
-  color: #6d4c41;
-  text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+  font-size: 3rem; /* Sets the font size of <h1> elements to 3rem */
+  margin: 0;  /* Removes margin from <h1> elements */
+  padding: 1rem 0;  /* Adds 1rem of padding to the top and bottom of <h1> elements, and 0 padding to the left and right */
+  font-weight: bold; /*padding to the left and right */
+  text-align: center; /* Centers the text of <h1> elements horizontally */
+  color: #6d4c41; /* Sets the text color of <h1> elements to brown */
+  text-shadow: 1px 1px 0px rgba(255,255,255,0.5); /* Adds a text shadow to <h1> elements */
 }
 
-h2 {
-  margin: 0;
-  margin-bottom: 1rem;
-  padding: 0;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+h2 { /* Defines the styles for <h2> elements */
+  margin: 0; /* Removes margin from <h2> elements */
+  margin-bottom: 1rem; /* Adds 1rem of margin to the bottom of <h2> elements */
+  padding: 0; /* Removes padding from <h2> elements */
+  font-size: 1.5rem; /* Sets the font size of <h2> elements to 1.5rem */
+  font-weight: bold;  /* Sets the font weight of <h2> elements to bold */
+  color: #333; /* Sets the text color of <h2> elements to #333 */
 }
 
 nav {
