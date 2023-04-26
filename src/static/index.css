@@ -1,15 +1,16 @@
 :root {
-  --main-color: #1b2727;
-  --secondary-color: #f2f2f2;
+  --main-color: #1b2727; /* Defines a custom CSS variable "--main-color" with a value of #1b2727 */
+  --secondary-color: #f2f2f2; /* Defines a custom CSS variable "--secondary-color" with a value of #f2f2f2 */
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--secondary-color);
-  color: var(--main-color);
+  font-family: Arial, sans-serif; /* Sets the font family of the body element to Arial or a sans-serif font */
+  margin: 0; /* Removes margin from the body element */
+  padding: 0; /* Removes padding from the body element */
+  background-color: var(--secondary-color); /* Sets the background color of the body element to the value of the custom CSS variable "--secondary-color" */
+  color: var(--main-color); /* Sets the text color of the body element to the value of the custom CSS variable "--main-color" */
 }
+
 
 h1, h2 {
   text-align: center;
