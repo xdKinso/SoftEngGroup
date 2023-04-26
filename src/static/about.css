@@ -1,8 +1,8 @@
 .about {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-  }
+  display: grid; /* Sets the display property of .about to grid */
+  grid-template-columns: repeat(4, 1fr); /* Defines the grid template columns for .about to repeat 4 columns each with a width of 1fr (fraction) */
+  gap: 2rem; /* Sets the gap between grid items within .about to 2rem */
+}
   
   .profile {
     border: 2px solid #ddd;
