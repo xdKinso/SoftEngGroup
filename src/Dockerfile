@@ -1,7 +1,7 @@
 # Use Node JS v16.x as base image 
 FROM node:latest
 
-# Create server directory inside images
+# Create server directory inside image
 WORKDIR /app
 
 # Copy the source coded
