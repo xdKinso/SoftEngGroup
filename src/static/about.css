@@ -15,8 +15,9 @@
   }
   
   .profile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);/* Applies a translateY transformation of -5px (moves the element 5 pixels up) on hover for .profile */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);/* Modifies the box shadow for .profile on hover with a blur radius of 16px */
+  
   }
   
   .profile img {
