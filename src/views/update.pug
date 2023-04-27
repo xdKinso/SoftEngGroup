@@ -4,19 +4,21 @@ block head
   link(rel="stylesheet", href="/index.css")
   link(rel="stylesheet", href="/update.css")
 
+block content
+  .container
+    h2 Update the Database
+    p Please fill in the information to update the database.
+    form(action='/api/update', method='POST')
+      label(for='countryname') Enter your Country name:
+      input(name='countryname', type='text', required)
 
-block content 
-  h2 Update the Database 
-  p please write all these information to be updated to the database.
-  form(action='/api/update', method='POST')
-  label(for='countryname') Enter your Country name:
-  input('name'='countryname', type='countryname', required)
-  label(for='countrycode') Enter your Country code:
-  input('name'='countrycode', type='countrycode', required)
-  label(for='district') Enter your District:
-  input('name'='district', type='district', required)
-  label(for='population') Enter your Population:
-  input('name'='population', type='population', required)
-  input(type='submit' value='Submit')
-    
-    
+      label(for='countrycode') Enter your Country code:
+      input(name='countrycode', type='text', required)
+
+      label(for='district') Enter your District:
+      input(name='district', type='text', required)
+
+      label(for='population') Enter your Population:
+      input(name='population', type='number', required)
+
+      input(type='submit', value='Submit')

@@ -1,70 +1,67 @@
-:root {
-  --primary-color: #1b2727;
-  --secondary-color: #f2f2f2;
-  --border-color: #ccc;
-  --button-color: #4CAF50;
-}
-
-body {
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--secondary-color);
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.form-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 h2 {
-  text-align: center;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
-.form-group {
-  margin-bottom: 20px;
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #666;
 }
 
-label {
-  font-size: 18px;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 10px;
-  font-family: Arial, sans-serif;
-  color: var(--primary-color);
-}
-
-input[type=email],
-input[type=password] {
+form {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 12px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  color: var(--primary-color);
+  max-width: 400px; /* Set a maximum width for the form */
+  padding: 1rem; /* Add padding around the form */
+  gap: 0.5rem; /* Increase the gap between form elements */
+  box-sizing: border-box; /* Make sure padding is included in the width calculation */
+  font-family: Arial, sans-serif; /* Apply a consistent font-family */
 }
 
-button {
-  background-color: var(--button-color);
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  width: 100%;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+form label:not(:first-child) {
+  margin-top: 0.25rem;
 }
 
-button:hover {
-  background-color: #3e8e41;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+form input,
+form textarea,
+form select {
+  width: 100%; /* Make form elements take up the full width of the form */
+  padding: 0.5rem; /* Add padding for better usability */
+  border: 1px solid #ccc; /* Set a consistent border style */
+  border-radius: 4px; /* Add rounded corners to form elements */
+  font-size: 1rem; /* Set a consistent font-size */
+  box-sizing: border-box; /* Make sure padding is included in the width calculation */
 }
+
+form input[type='submit'] {
+  margin-top: 0.5rem;
+  background-color: #0077cc; /* Set a background color for the submit button */
+  color: #fff; /* Set a text color for the submit button */
+  border: none; /* Remove the border from the submit button */
+  cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+}
+
+form input[type='submit']:hover {
+  background-color: #005fa3; /* Change the background color when hovering over the submit button */
+}
+

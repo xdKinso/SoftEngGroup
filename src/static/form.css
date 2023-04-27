@@ -1,14 +1,37 @@
 form {
-    display: flex;
-    flex-direction: column;
-    width: min-content;
-    gap: 0.25rem;
-  }
-  
-  form label:not(:first-child) {
-    margin-top: 0.25rem;
-  }
-  
-  form input[type='submit'] {
-    margin-top: 0.5rem;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; /* Set a maximum width for the form */
+  padding: 1rem; /* Add padding around the form */
+  gap: 0.5rem; /* Increase the gap between form elements */
+  box-sizing: border-box; /* Make sure padding is included in the width calculation */
+  font-family: Arial, sans-serif; /* Apply a consistent font-family */
+}
+
+form label:not(:first-child) {
+  margin-top: 0.25rem;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%; /* Make form elements take up the full width of the form */
+  padding: 0.5rem; /* Add padding for better usability */
+  border: 1px solid #ccc; /* Set a consistent border style */
+  border-radius: 4px; /* Add rounded corners to form elements */
+  font-size: 1rem; /* Set a consistent font-size */
+  box-sizing: border-box; /* Make sure padding is included in the width calculation */
+}
+
+form input[type='submit'] {
+  margin-top: 0.5rem;
+  background-color: #0077cc; /* Set a background color for the submit button */
+  color: #fff; /* Set a text color for the submit button */
+  border: none; /* Remove the border from the submit button */
+  cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+}
+
+form input[type='submit']:hover {
+  background-color: #005fa3; /* Change the background color when hovering over the submit button */
+}
