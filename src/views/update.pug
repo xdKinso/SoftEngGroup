@@ -7,14 +7,17 @@ block head
 
 
 block content 
-    h2 Update the Database 
+  h2 Update the Database 
+  p please write all these information to be updated to the database.
+  form(action='/api/update', method='POST')
+  label(for='countryname') Enter your Country name:
+  input('name'='countryname', type='countryname', required)
+  label(for='countrycode') Enter your Country code:
+  input('name'='countrycode', type='countrycode', required)
+  label(for='district') Enter your District:
+  input('name'='district', type='district', required)
+  label(for='population') Enter your Population:
+  input('name'='population', type='population', required)
+  input(type='submit' value='Submit')
     
-    form
-      .mb-3
-        label.form-label(for='exampleInputEmail1') Email address
-        input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp')
-        #emailHelp.form-text We&apos;ll never share your email with anyone else.
-      .mb-3
-        label.form-label(for='exampleInputPassword1') Password
-        input#exampleInputPassword1.form-control(type='password')
-      button.btn.btn-primary(type='submit') Submit
+    

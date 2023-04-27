@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    gap: 0.25rem;
+  }
+  
+  form label:not(:first-child) {
+    margin-top: 0.25rem;
+  }
+  
+  form input[type='submit'] {
+    margin-top: 0.5rem;
+  }
