@@ -1,8 +1,7 @@
 import express from "express";
 import mysql from "mysql2/promise";
-import bcrypt from "bcryptjs"
+import bcrypt from "bcryptjs";
 import session from "express-session";
-
 
 const app = express();
 const port = 3000;
@@ -17,7 +16,6 @@ app.use(
     cookie: { secure: false },
   })
 );
-
 
 app.set("view engine", "pug");
 app.use(express.static("static"));
@@ -53,6 +51,27 @@ app.get("/update", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.render("about", { title: "Team" });
+});
+
+app.post('/api/update', async (req, res) => {
+  try {
+    const { countryname, countrycode, district, population } = req.body;
+
+    // Update the country in the database
+    const [rows, fields] = await db.execute(
+      'UPDATE country SET Name = ?, Region = ?, Population = ? WHERE Code = ?',
+      [countryname, district, population, countrycode]
+    );
+    
+
+    if (rows.affectedRows > 0) {
+      res.json({ success: true, message: 'Country updated successfully' });
+    } else {
+      res.status(404).json({ success: false, message: 'Country not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'An error occurred', error });
+  }
 });
 
 app.get("/cities", async (req, res) => {
@@ -207,9 +226,6 @@ app.post("/api/login", async (req, res) => {
 
   return res.redirect("/account");
 });
-
-
-
 
 
 app.listen(port, () => {
